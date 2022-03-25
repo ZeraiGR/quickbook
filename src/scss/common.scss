@@ -1,1 +1,98 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.title {
+    @include adaptiveValue('font-size', 35, 24);
+    color: #ffffff;
+
+    span {
+        display: block;
+        font-size: 18px;
+        color: #069dde;
+    }
+}
+
+.btn {
+    position: relative;
+    padding: rem(20) 0;
+    min-width: rem(200);
+    display: inline-block;
+    font-family: 'NeueMachina', sans-serif;
+    text-decoration: none;
+    color: $accent;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    text-align: center;
+    @include adaptiveValue('font-size', 18, 15);
+
+    span {
+        display: block;
+        color: $accent;
+        line-height: 1;
+
+        &::after,
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+        }
+
+        &::before {
+            border-left: 2px solid $accent;
+            border-top: 2px solid $accent;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0%;
+            width: 0;
+            transition: height 0.3s linear 0.3s, width 0.3s linear 0s;
+        }
+
+        &::after {
+            height: 18px;
+            width: 2px;
+            background-color: $accent;
+        }
+    }
+
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+
+    &::before {
+        width: 14px;
+        height: 2px;
+        top: 0;
+        background-color: $accent;
+    }
+
+    &::after {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+        z-index: -1;
+    }
+
+    &:hover {
+        &::after {
+            background-color: $accent;
+            transition: background-color 0.3s linear 0.6s;
+        }
+
+        span {
+            color: #fff;
+            transition-delay: 0.6s;
+
+            &::before {
+                width: 100%;
+                height: 100%;
+                transition: height 0.3s linear 0s, width 0.3s linear 0.3s;
+            }
+        }
+    }
+}
