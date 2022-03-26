@@ -74,16 +74,28 @@ body {
     flex-direction: column;
     overflow: hidden;
 
-    &::before {
+    &::before,
+    &::after {
         position: absolute;
         left: 0;
+        border-radius: 50%;
+        filter: blur(232px);
+        content: '';
+    }
+
+    &::before {
         top: 0;
         width: 529px;
         height: 529px;
-        border-radius: 50%;
         background-color: $accent;
-        filter: blur(232px);
-        content: '';
+    }
+
+    &::after {
+        bottom: 0;
+        left: -5%;
+        width: 273px;
+        height: 273px;
+        background-color: #ffffff;
     }
 
     // Прижимаем footer
@@ -169,6 +181,11 @@ body {
 @import 'header';
 @import 'footer';
 @import 'hero';
+@import 'service';
+@import 'about';
+@import 'benefits';
+@import 'counter';
+@import 'convertation';
 
 // Подключение стилей отдельных страниц
 @import 'home';

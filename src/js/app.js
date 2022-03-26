@@ -24,6 +24,9 @@ import '../scss/style.scss';
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
 
+// Анимирование чисел
+import { CountUp } from './libs/countUp.min.js';
+
 // Основные модули ========================================================================================================================================================================================================================================================
 import * as flsFunctions from './files/functions.js';
 
@@ -177,3 +180,21 @@ import { headerFixed } from './files/script.js';
 // headerFixed();
 
 //============================================================================================================================================================================================================================================
+
+let switcher = false;
+
+window.addEventListener('scroll', function () {
+    const counter = document.querySelector('.counter__display');
+
+    if (switcher) {
+        counter.classList.remove('active');
+    }
+
+    console.log(switcher);
+
+    if (counter.classList.contains('active')) {
+        var countUp = new CountUp('number', 300);
+        countUp.start();
+        switcher = true;
+    }
+});

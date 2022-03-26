@@ -1,0 +1,99 @@
+.convertation {
+    margin: rem(100) 0;
+}
+
+.convertation__content {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(25);
+}
+
+.convertation__title {
+    max-width: 47%;
+    color: $accent;
+    @include adaptiveValue('font-size', 35, 24);
+    font-family: 'NeueMachina', sans-serif;
+}
+
+.convertation__item {
+    display: block;
+    font-family: 'OpenSans', sans-serif;
+
+    &:not(:last-of-type) {
+        margin-bottom: rem(50);
+    }
+
+    &--big {
+        margin-bottom: rem(45);
+        padding: rem(25) rem(15);
+        min-height: rem(160);
+        border: 1px solid $mainColor;
+        cursor: pointer;
+        font-size: rem(18);
+    }
+}
+
+.convertation__field {
+    width: 100%;
+    padding: 0 rem(3) rem(8);
+    background-color: transparent;
+    border-bottom: 1px solid $mainColor;
+    outline: transparent;
+    color: #ffffff;
+
+    &::placeholder {
+        color: $mainColor;
+    }
+
+    &:focus {
+        border-color: #ffffff;
+    }
+}
+
+input[type='file'] {
+    display: none;
+}
+
+.convertation__submit {
+    display: flex;
+    align-items: center;
+}
+
+.convertation__btn {
+    margin-right: rem(25);
+    color: #ffffff;
+
+    span {
+        color: #ffffff;
+
+        &::before {
+            border-left: 2px solid #ffffff;
+            border-top: 2px solid #ffffff;
+        }
+
+        &::after {
+            background-color: #ffffff;
+        }
+    }
+
+    &::before {
+        background-color: #ffffff;
+    }
+
+    &:hover {
+        &::after {
+            background-color: #ffffff;
+        }
+
+        span {
+            color: $accent;
+        }
+    }
+}
+
+.convertation__info {
+    max-width: rem(290);
+    font-family: 'OpenSans', sans-serif;
+    line-height: 1.3;
+    color: #ffffff;
+}

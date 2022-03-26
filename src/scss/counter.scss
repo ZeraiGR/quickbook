@@ -1,0 +1,34 @@
+.counter {
+    margin: rem(100) 0;
+}
+
+.counter__container {
+    background-image: url('@img/decor-brand-2.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.counter__content {
+    margin-left: auto;
+    padding: rem(135) 0;
+    max-width: 60%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.counter__title {
+    @include adaptiveValue('font-size', 27, 24);
+    @include adaptiveValue('margin-bottom', 40, 30);
+}
+
+.counter__display {
+    @include adaptiveValue('font-size', 27, 24);
+    color: #ffffff;
+
+    strong {
+        margin-right: rem(20);
+        font-size: rem(55);
+        color: $second;
+        font-weight: 400;
+    }
+}

@@ -1,3 +1,41 @@
 //====================================================================================================
 
+.footer {
+    border-top: 1px solid #626262;
+}
+
+.footer__container {
+}
+
+.footer__inner {
+    padding: rem(50) 0 rem(45);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    font-size: rem(24);
+    color: $second;
+    font-family: 'NeueMachina', sans-serif;
+}
+
+.footer__list {
+    display: flex;
+    font-family: 'OpenSans', sans-serif;
+    color: $accent;
+    @include adaptiveValue('font-size', 18, 16);
+}
+
+.footer__item {
+    &:not(:last-child) {
+        margin-right: rem(50);
+    }
+}
+
+.footer__link {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 //====================================================================================================

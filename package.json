@@ -19,6 +19,7 @@
     },
     "devDependencies": {
         "copy-webpack-plugin": "latest",
+        "countup.js": "^2.1.0",
         "css-loader": "latest",
         "del": "latest",
         "file-include-webpack-plugin-replace": "latest",

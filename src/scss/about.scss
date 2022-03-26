@@ -1,0 +1,42 @@
+.about {
+    position: relative;
+    margin: rem(100) 0;
+
+    &::after {
+        position: absolute;
+        right: 30%;
+        top: 15%;
+        width: 273px;
+        height: 273px;
+        border-radius: 50%;
+        background-color: $second;
+        filter: blur(232px);
+        content: '';
+    }
+}
+
+.about__title {
+    font-family: 'NeueMachina', sans-serif;
+    margin-bottom: rem(30);
+}
+
+.about__content {
+    font-family: 'OpenSans', sans-serif;
+
+    p {
+        @include adaptiveValue('font-size', 27, 15);
+        text-transform: uppercase;
+        color: #ffffff;
+        opacity: 0.05;
+        max-width: 75%;
+        transition: opacity 1s ease;
+
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}

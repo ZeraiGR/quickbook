@@ -1,5 +1,5 @@
 .hero {
-    margin: rem(60) 0 rem(50);
+    margin: rem(60) 0 rem(100);
 }
 
 .hero__container {
@@ -15,6 +15,7 @@
     color: #ffffff;
     @include adaptiveValue('font-size', 24, 18);
     line-height: 1.3;
+    font-family: 'OpenSans', sans-serif;
 
     strong {
         display: block;

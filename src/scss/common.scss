@@ -3,6 +3,7 @@
 .title {
     @include adaptiveValue('font-size', 35, 24);
     color: #ffffff;
+    font-family: 'NeueMachina', sans-serif;
 
     span {
         display: block;
